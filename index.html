@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IMPRESSIVE RESUMES">
+    <title>Resume Monster Pro</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2V29WTSCN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-G2V29WTSCN');
+    </script>
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F3F2F1;
+            color: #323130;
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+        h1, h2, h3 {
+            color: #323130;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Styling */
+        header {
+            position: relative;
+            background-color: #0078D4;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJ1c2luZXNzJTIwb2ZmaWNlfGVufDB8fHx8MTYwOTI1NTAzNg&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 
+                2px 2px 0 #000,
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                0 2px 0 #000,
+                2px 0 0 #000,
+                0 -2px 0 #000,
+                -2px 0 0 #000;
+            animation: fadeInDown 1s ease-out;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out;
+            font-weight: 500;
+        }
+
+        /* Optional: Add a subtle glow effect */
+        header h1 {
+            position: relative;
+        }
+
+        header h1:after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.5;
+            color: #fff;
+        }
+
+        /* Adjust for mobile */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+                text-shadow: 
+                    1px 1px 0 #000,
+                    -1px -1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000;
+            }
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav a {
+            color: #333;
+            font-weight: 600;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background-color: #0078D4;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu */
+        .menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+            background: none;
+            border: none;
+            padding: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .menu:hover {
+            color: #0078D4;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            header {
+                height: 300px;
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            nav a {
+                padding: 15px 20px;
+                width: 100%;
+                text-align: center;
+                border-radius: 0;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .cta button {
+            padding: 12px 25px;
+            background-color: #0078D4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta button:hover {
+            background-color: #005A9E;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 80px 20px;
+        }
+
+        #testimonials h2 {
+            color: #0078D4;
+            font-size: 2.2em;
+            margin-bottom: 50px;
+            position: relative;
+            text-align: center;
+        }
+
+        #testimonials h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #0078D4;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-icon {
+            color: #0078D4;
+            font-size: 2em;
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            opacity: 0.1;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #0078D4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .author-title {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            #testimonials {
+                padding: 40px 15px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #323130;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* Purchase Section Styling */
+        #purchase_now {
+            padding: 40px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card h3 {
+            color: #0078D4;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0078D4;
+            padding-bottom: 10px;
+        }
+
+        .package-card .price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #323130;
+            margin: 15px 0;
+        }
+
+        .package-card ul {
+            margin: 20px 0;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        .package-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .package-card ul li:before {
+            content: "✓";
+            color: #0078D4;
+            position: absolute;
+            left: 0;
+        }
+
+        stripe-buy-button {
+            display: block;
+            margin-top: 20px;
+        }
+
+        /* About Section Styling */
+        #about {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            text-align: left;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #0078D4;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0078D4;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .highlight-text {
+            color: #0078D4;
+            font-weight: 600;
+        }
+
+        .about-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                margin-top: 20px;
+            }
+        }
+
+        /* Services Section Styling */
+        #services {
+            background: linear-gradient(to bottom right, #f8f9fa, #ffffff);
+            padding: 60px 20px;
+        }
+
+        #services h2 {
+            color: #0078D4;
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        #services h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #0078D4;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0078D4;
+            background: #f0f7ff;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .service-card h3 {
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .service-price {
+            font-size: 1.8em;
+            color: #0078D4;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .service-features {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .service-features li:before {
+            content: "✓";
+            color: #0078D4;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+            
+            #services {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+
+    <script>
+        // Change navbar style on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1 data-text="Resume Monster">Resume Monster</h1>
+    <p>Your Partner in Building the Impressive Resume</p>
+</header>
+
+<nav>
+    <ul>
+        <li><button class="menu" onclick="toggleMenu()">☰</button></li>
+        <li class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-text">
+            <p>Are you struggling to turn your experience into interviews? Does your resume fail to get noticed, even though you know you've got the skills? <span class="highlight-text">I can help!</span></p>
+            
+            <p>With over <span class="highlight-text">12 years of experience</span>, I've helped countless professionals craft resumes that land interviews, optimize their LinkedIn profiles, and stand out to recruiters.</p>
+            
+            <p>Whether you're a recent graduate, a seasoned pro, or someone switching careers, I can tailor your resume and job search strategy to get the results you want.</p>
+            
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="stat-number">2,500+</div>
+                    <div class="stat-label">Resumes Written</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">48hrs</div>
+                    <div class="stat-label">Average Delivery</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                 alt="Professional Resume Writing" 
+                 loading="lazy">
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <div class="service-icon">📝</div>
+            <h3>ATS-Friendly Resume</h3>
+            <div class="service-features">
+                <li>ATS-optimized format</li>
+                <li>Keyword optimization</li>
+                <li>Professional formatting</li>
+                <li>2 revisions included</li>
+            </div>
+            <div class="service-price">$50</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔍</div>
+            <h3>Resume + Tips Package</h3>
+            <div class="service-features">
+                <li>ATS-optimized resume</li>
+                <li>Application strategy guide</li>
+                <li>Job search tips</li>
+                <li>3 revisions included</li>
+            </div>
+            <div class="service-price">$70</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">✉️</div>
+            <h3>Resume + Cover Letter</h3>
+            <div class="service-features">
+                <li>ATS-optimized resume</li>
+                <li>Customized cover letter</li>
+                <li>Matching formatting</li>
+                <li>3 revisions included</li>
+            </div>
+            <div class="service-price">$75</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🔗</div>
+            <h3>LinkedIn Profile Setup</h3>
+            <div class="service-features">
+                <li>Profile optimization</li>
+                <li>Keyword enhancement</li>
+                <li>1-hour consultation</li>
+                <li>2 revisions included</li>
+            </div>
+            <div class="service-price">$50</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💼</div>
+            <h3>Mock Interview Practice</h3>
+            <div class="service-features">
+                <li>1-hour mock interview</li>
+                <li>Detailed feedback</li>
+                <li>Interview strategies</li>
+                <li>Follow-up tips</li>
+            </div>
+            <div class="service-price">$50</div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">🎯</div>
+            <h3>Complete Package</h3>
+            <div class="service-features">
+                <li>All services included</li>
+                <li>Priority support</li>
+                <li>Unlimited revisions</li>
+                <li>30-day support</li>
+            </div>
+            <div class="service-price">$150</div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                I landed my dream job within weeks after using their services! The resume they built for me was professional and really made me stand out.
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">S</div>
+                <div class="author-info">
+                    <div class="author-name">Sarah M.</div>
+                    <div class="author-title">Marketing Specialist</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                The resume optimization helped me get noticed by several recruiters. Highly recommend! I'm now in a job I love.
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">J</div>
+                <div class="author-info">
+                    <div class="author-name">John D.</div>
+                    <div class="author-title">Software Engineer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                After being stuck in the same role for years, I decided to update my resume with their help. Within a month, I had multiple interviews lined up. A game-changer!
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">L</div>
+                <div class="author-info">
+                    <div class="author-name">Lisa R.</div>
+                    <div class="author-title">Project Manager</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                As a recent graduate, I struggled to put my accomplishments into words. They helped me create a resume that showcased my potential. I secured my first full-time position within weeks!
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">E</div>
+                <div class="author-info">
+                    <div class="author-name">Emily P.</div>
+                    <div class="author-title">Graphic Designer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                The LinkedIn profile optimization was exceptional! Within days, I started receiving connection requests from recruiters. The investment was worth every penny.
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">M</div>
+                <div class="author-info">
+                    <div class="author-name">Michael K.</div>
+                    <div class="author-title">Business Development Manager</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <div class="testimonial-content">
+                The mock interview session was eye-opening. They provided detailed feedback and strategies that helped me ace my actual interviews. Landed a position with a 40% salary increase!
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">R</div>
+                <div class="author-info">
+                    <div class="author-name">Rachel T.</div>
+                    <div class="author-title">Financial Analyst</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: support@resume.monster</p>
+    <p>Phone: (647) 797-6721</p>
+    <div class="cta">
+        <button onclick="window.location.href='mailto:support@resume.monster'">More Questions</button>
+    </div>
+</section>
+
+<section id="purchase_now">
+    <h2>Ready to Transform Your Career?</h2>
+    <p>Choose the package that best fits your needs and take the first step towards your dream job.</p>
+    
+    <div class="package-grid">
+        <div class="package-card">
+            <h3>ATS-Friendly Resume</h3>
+            <div class="price">$50</div>
+            <ul>
+                <li>ATS-optimized format</li>
+                <li>Keyword optimization</li>
+                <li>Professional formatting</li>
+                <li>2 revisions included</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJa9DQnuUIBVJbAWoOb514" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+
+        <div class="package-card">
+            <h3>Resume + Tips Package</h3>
+            <div class="price">$70</div>
+            <ul>
+                <li>ATS-optimized resume</li>
+                <li>Application strategy guide</li>
+                <li>Job search tips</li>
+                <li>3 revisions included</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJv1DQnuUIBVJbRh5V8XEz" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+
+        <div class="package-card">
+            <h3>Resume + Cover Letter</h3>
+            <div class="price">$75</div>
+            <ul>
+                <li>ATS-optimized resume</li>
+                <li>Customized cover letter</li>
+                <li>Matching formatting</li>
+                <li>3 revisions included</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJw2DQnuUIBVJbmG9a7Mbm" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+
+        <div class="package-card">
+            <h3>LinkedIn Profile Setup</h3>
+            <div class="price">$50</div>
+            <ul>
+                <li>Profile optimization</li>
+                <li>Keyword enhancement</li>
+                <li>1-hour consultation</li>
+                <li>2 revisions included</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJwSDQnuUIBVJbnC6uoVLE" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+
+        <div class="package-card">
+            <h3>Mock Interview Practice</h3>
+            <div class="price">$50</div>
+            <ul>
+                <li>1-hour mock interview</li>
+                <li>Detailed feedback</li>
+                <li>Interview strategies</li>
+                <li>Follow-up tips</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJwwDQnuUIBVJbT8TTakML" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+
+        <div class="package-card">
+            <h3>Complete Package</h3>
+            <div class="price">$150</div>
+            <ul>
+                <li>All services included</li>
+                <li>Priority support</li>
+                <li>Unlimited revisions</li>
+                <li>30-day support</li>
+            </ul>
+            <stripe-buy-button buy-button-id="buy_btn_1QFJxLDQnuUIBVJbVQFu0Vjm" publishable-key="pk_live_51QFJQFDQnuUIBVJbww3BxbDNBZlbEDjMUbUtBS4f6H758khfw62vjX4uctNZy3YmdpLzDccRLRL4YAj210IeEJbk00ieBkwZLe"></stripe-buy-button>
+        </div>
+    </div>
+</section>
+
+<section id="refund_policy" style="padding: 30px 20px; max-width: 900px; margin: 20px auto 30px; background-color: #fafafa; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);">
+    <h2 style="font-size: 1.5em; margin-bottom: 15px;">Refund Policy</h2>
+    <p style="font-size: 0.95em; line-height: 1.6; color: #666;">At Resume.Monster, we strive to deliver exceptional service tailored to your career needs. While all sales are final and no refunds are permitted for services rendered, your satisfaction is our priority. If you're dissatisfied with the results, we commit to collaborating with you—free of charge—until your expectations are met.</p>
+    <p style="font-size: 0.95em; line-height: 1.6; color: #666;">For any concerns, contact us at <a href="mailto:support@resume.monster" style="color: #0078D4;">support@resume.monster</a> to discuss adjustments or further assistance.</p>
+</section>
+
+<!-- Add Stripe.js before closing body tag -->
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+<footer>
+    <p>&copy; 2025 Resume Monster. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
